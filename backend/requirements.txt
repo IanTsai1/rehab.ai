@@ -1,0 +1,6 @@
+flask
+numpy 
+tensorflow-macos
+tensorflow-metal 
+opencv-python
+Pillow
