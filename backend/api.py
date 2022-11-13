@@ -1,5 +1,6 @@
 from exercise_imgs import *
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import os
 import cv2
@@ -14,6 +15,7 @@ if not os.path.exists('./uploads'):
     os.mkdir('./uploads')
     
 app = Flask(__name__)
+CORS(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):

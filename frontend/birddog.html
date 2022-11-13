@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="help.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <button class="unstyled-button" onClick="window.location.reload();">
+      <img id="img" src="personal_trainer_png.png" alt="logo" />
+    </button>
+    <div class="header">
+      <h1>Form Analysis</h1>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9 col-xs-12 text-center">
+      <iframe
+        class="embed-responsive-item"
+        src="https://www.youtube.com/embed/wiFNA3sqjCA"
+      ></iframe>
+    </div>
+
+    <div class="text-center">
+      <input type="file" id="files" class="hidden" />
+      <label for="files"></label>
+    </div>
+    <div class="container">
+      <h1>Upload your video:</h1>
+      <form
+        action="http://127.0.0.1:5000/predict"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <input type="file" name="video" />
+        <input type="hidden" name="exercise_name" value="bird_dog" />
+        <input type="submit" name="submit_btn" value="Submit" />
+      </form>
+    </div>
+    <p></p>
+
+    <div class="text-center">
+      <div class="container">
+        <form action="score.html">
+          <button class="button button2">
+            <strong>Score Calculation</strong>
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
